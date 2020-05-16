@@ -47,7 +47,7 @@ playerKeys = Array.from(new Set(playerKeys))
 document.querySelectorAll('.controls .button').forEach(button => {
     button.addEventListener('click', event => {
         console.log(button.innerText)
-        if (button.innerText === 'loop') {
+        if (button.classList.contains('loop')) {
             button.classList.toggle('is-info')
             return
         }
@@ -72,17 +72,24 @@ document.querySelectorAll('.controls .button').forEach(button => {
 
 // Listen for current time
 setInterval(() => {
-    let activeButton = document.querySelector('.controls .button.is-primary')
-    if (activeButton) {
-        let activeControl = activeButton.closest('.control')
-        if (parseInt(players[activeControl.soundData.file].currentTime) === parseInt(activeControl.soundData.endTime)) {
-            if (activeControl.querySelector('.loop.is-info')) {
-                activeButton.click()
-                activeControl.querySelector('.loop').classList.add('is-info')
-                return
+    let activeButtons = document.querySelectorAll('.controls .button.is-primary')
+    if (activeButtons) {
+        activeButtons.forEach(activeButton => {
+            let activeControl = activeButton.closest('.control')
+            if (parseInt(players[activeControl.soundData.file].currentTime) === parseInt(activeControl.soundData.endTime)) {
+                if (activeControl.querySelector('.loop.is-info')) {
+                    activeButton.click()
+                    activeControl.querySelector('.loop').classList.add('is-info')
+                    return
+                }
+                if (!activeControl.soundData.end) {
+                    activeButton.classList.remove('is-primary')
+                    players[activeControl.soundData.file].pause()
+                } else {
+                    document.getElementById(activeControl.soundData.end).querySelector('.button').click()
+                }
             }
-            document.getElementById(activeControl.soundData.end).querySelector('.button').click()
-        }
+        })
     }
 }, 1000)
 
