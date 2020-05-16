@@ -15,11 +15,6 @@
   },
   "author": "Matthew Dawkins <matthew.dawkins@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4"
-  },
-  "devDependencies": {
-    "vue-template-compiler": "^2.6.11"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

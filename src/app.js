@@ -1,4 +1,4 @@
-import SmallPrairie from '../public/data/4575.js'
+import SmallPrairie from './data/4575.js'
 
 let players = []
 let playerKeys = []
