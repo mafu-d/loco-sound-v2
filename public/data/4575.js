@@ -1,7 +1,7 @@
 export default [
   {
     id: 'idle',
-    file: 'data/4575.wav',
+    file: 'data/4575.mp3',
     startTime: 138,
     endTime: 171,
     loopable: false,
@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 'start',
-    file: 'data/4575.wav',
+    file: 'data/4575.mp3',
     startTime: 1,
     endTime: 69,
     loopable: false,
@@ -19,7 +19,7 @@ export default [
   },
   {
     id: 'cruise',
-    file: 'data/4575.wav',
+    file: 'data/4575.mp3',
     startTime: 69,
     endTime: 100,
     loopable: true,
@@ -28,7 +28,7 @@ export default [
   },
   {
     id: 'stop',
-    file: 'data/4575.wav',
+    file: 'data/4575.mp3',
     startTime: 100,
     endTime: 140,
     loopable: false,
@@ -37,7 +37,7 @@ export default [
   },
   {
     id: 'move',
-    file: 'data/4575.wav',
+    file: 'data/4575.mp3',
     startTime: 173,
     endTime: 190,
     loopable: false,
