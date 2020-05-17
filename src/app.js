@@ -1,4 +1,5 @@
-import SmallPrairie from './data/4575.js'
+import SmallPrairie from './4575/banks.js'
+import Environment from './env/banks.js'
 
 // let players = []
 // let playerKeys = []
@@ -6,16 +7,12 @@ let sets = [
     {
         id: 'env',
         name: 'Environment',
-        banks: [],
-        players: [],
-        playerKeys: [],
+        banks: Environment,
     },
     {
         id: '4575',
         name: '4575 Small Prairie',
         banks: SmallPrairie,
-        players: [],
-        playerKeys: [],
     }
 ]
 
