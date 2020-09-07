@@ -8,10 +8,23 @@ export default [
         name: 'Countryside',
         startTime: 0,
         endTime: 600,
-        loopable: false,
-        next: 'env-countryside',
+        loopable: true,
+        // next: 'env-countryside',
       },
     ]
+  },
+  {
+    id: 'sheep',
+    file: 'src/env/sheep.mp3',
+    sounds: [
+      {
+        id: 'env-sheep',
+        name: 'Sheep',
+        startTime: 0,
+        endTime: 60,
+        loopable: true,
+      },
+    ],
   },
   {
     id: 'seaside',
@@ -22,8 +35,8 @@ export default [
         name: 'Seaside',
         startTime: 0,
         endTime: 117,
-        loopable: false,
-        next: 'env-seaside',
+        loopable: true,
+        // next: 'env-seaside',
       },
     ]
   },
@@ -36,8 +49,8 @@ export default [
         name: 'Town',
         startTime: 0,
         endTime: 117,
-        loopable: false,
-        next: 'env-town',
+        loopable: true,
+        // next: 'env-town',
       },
     ]
   },
@@ -50,8 +63,8 @@ export default [
         name: 'Conversation',
         startTime: 0,
         endTime: 117,
-        loopable: false,
-        next: 'env-conversation',
+        loopable: true,
+        // next: 'env-conversation',
       },
     ]
   },
