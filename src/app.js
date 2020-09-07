@@ -10,8 +10,8 @@ let sets = [
         banks: Environment,
     },
     {
-        id: '4575',
-        name: '4575 Small Prairie',
+        id: '45xx',
+        name: '45xx Small Prairie',
         banks: SmallPrairie,
     }
 ]
@@ -68,15 +68,18 @@ tabs.querySelectorAll('a').forEach(tab => {
 
 // Play sounds
 document.querySelectorAll('.bank .sound .button:first-child').forEach(button => {
+    const bank = button.closest('.bank')
+    const sound = button.closest('.sound')
+    const buttons = bank.querySelectorAll('.button')
     button.addEventListener('click', () => {
         // Turn off other buttons in this bank
-        button.closest('.bank').querySelectorAll('.button').forEach(otherButton => otherButton.classList.remove('is-primary', 'is-info'))
+        buttons.forEach(otherButton => otherButton.classList.remove('is-primary', 'is-info'))
         // Turn on this button
         button.classList.add('is-primary')
-        console.log(button.closest('.sound').id)
+        console.log(sound.id)
         // Play the sound
-        button.closest('.bank').player.currentTime = button.closest('.sound').dataset.startTime
-        button.closest('.bank').player.play()
+        bank.player.currentTime = sound.dataset.startTime
+        bank.player.play()
     })
 })
 
@@ -119,4 +122,4 @@ setInterval(() => {
             player.pause()
         }
     })
-}, 100)
+}, 50)
