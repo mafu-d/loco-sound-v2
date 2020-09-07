@@ -127,7 +127,7 @@ setInterval(() => {
       player.pause()
     }
   })
-}, 50)
+}, 100)
 
 // Listen for volume changes
 document.querySelectorAll('.volume').forEach(input => {
