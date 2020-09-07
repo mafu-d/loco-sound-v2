@@ -2,6 +2,7 @@ export default [
   {
     id: '45xx-movement',
     file: 'src/4575/4575.mp3',
+    adjustSpeed: true,
     sounds: [
       {
         id: '45xx-idle',

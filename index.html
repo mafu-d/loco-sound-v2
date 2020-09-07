@@ -30,9 +30,12 @@
         }
 
         .bank {
+            margin-top: 20px;
+        }
+
+        .is-grouped {
             display: flex;
             flex-wrap: wrap;
-            margin-top: 20px;
         }
     </style>
 
@@ -49,7 +52,17 @@
         <li class="tab"><a href=""></a></li>
 
         <!-- Each set can have multiple sound banks -->
-        <div class="is-grouped bank"></div>
+        <div class="bank is-spaced">
+            <div>
+                Volume
+                <input type="range" min="0" max="1" step="0.1" value="1" class="volume">
+            </div>
+            <div>
+                Speed
+                <input type="range" min="1.0" max="1.4" step="0.1" value="1" class="speed">
+            </div>
+            <div class="is-grouped"></div>
+        </div>
 
         <!-- Each sound is controlled with a button -->
         <div class="buttons has-addons sound">
